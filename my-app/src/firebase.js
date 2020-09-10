@@ -1,3 +1,6 @@
+import firebase from "firebase"
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyDf1vdl9EhOPCGvCCgaaVel7THmp6v5btY",
     authDomain: "challenge-8d911.firebaseapp.com",
@@ -8,3 +11,12 @@ const firebaseConfig = {
     appId: "1:419876125061:web:c07b49f70f830981c62cec",
     measurementId: "G-8S4XJVX983"
 };
+
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+
+export {db, auth};
